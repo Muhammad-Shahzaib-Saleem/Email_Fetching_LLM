@@ -48,7 +48,7 @@ col1, col2 = st.columns(2)
 with col1:
     on = st.toggle("Table Format")
     if on:
-        st.switch_page("../Read_Email/pages/table_format.py")
+        st.switch_page("pages/table_format.py")
 with col2:
     on_chat = st.toggle("Chat LLM")
     if on_chat:

@@ -1,10 +1,11 @@
 import streamlit as st
 import pandas as pd
 from groq import Groq
+from dotenv import load_dotenv
 import os
 import pages.table_format as tf
 
-
+load_dotenv()
 # Set up the app
 
 
@@ -14,7 +15,7 @@ st.title("📊 Chat with Your Email Data")
 st.caption("Ask questions about your data")
 
 # Initialize Groq client
-client = Groq(api_key="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")
+client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
 
 
